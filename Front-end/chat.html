@@ -5,6 +5,17 @@
     <link rel="icon" type="image/png" href="images/icons/robot_icon.ico"/>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
 
     <meta charset="UTF-8">
     <title>Dining Robot</title>
@@ -257,12 +268,15 @@
 <script>
     var customer = 'right';
     var robot = 'left';
+    var apigClient = apigClientFactory.newClient();
+
 
 
     (function () {
         var Message;
         Message = function (arg) {
-            this.text = arg.text, this.message_side = arg.message_side;
+            this.text = arg.text;
+            this.message_side = arg.message_side;
             this.draw = function (_this) {
                 return function () {
                     var $message;
@@ -276,14 +290,17 @@
             }(this);
             return this;
         };
+
         $(function () {
-            var getMessageText, message_side, sendMessage;
+            var getMessageText, message_side, sendMessage, getReply;
 
             getMessageText = function () {
                 var $message_input;
                 $message_input = $('.message_input');
                 return $message_input.val();
             };
+
+
 
             sendMessage = function (text, sender) {
                 var $messages, message;
@@ -300,13 +317,26 @@
                 });
 
                 message.draw();
-                return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
+                return $messages.animate({scrollTop: $messages.prop('scrollHeight')}, 300);
+            };
+
+            getReply = function(msg){
+                var body = {
+                    "body": msg
+                };
+
+                apigClient.chatbotPost({}, body, {}).then((res)=>{
+                    var data = res.data;
+                    sendMessage(data, robot);
+                }).catch((e)=>{
+                    sendMessage('Sorry I failed to connect the server', robot);
+                });
             };
 
             $('.send_message').click(function (e) {
                 var customer_message = getMessageText();
                 sendMessage(customer_message, customer);
-                sendMessage(customer_message, robot);
+                getReply(customer_message);
             });
           sendMessage('Hello, I am your dining assistant!', robot);
         });
