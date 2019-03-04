@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="icon" type="image/png" href="images/icons/robot_icon.ico"/>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -14,6 +15,11 @@
 <div class="chat_window">
     <div class="top_menu">
         <div class="title">Dining Robot</div>
+        <div class="signout" onclick="window.location.href='https://dining-agent.auth.us-east-1.amazoncognito.com/login?' +
+        'response_type=code&client_id=3pab5c41pc87n342kigmn3t2mv' +
+        '&redirect_uri=https://d3n3sktne54bjw.cloudfront.net/index.html'">
+            Sign Out
+        </div>
     </div>
     <ul class="messages"></ul>
     <div class="bottom_wrapper clearfix">
@@ -28,6 +34,7 @@
         </div>
 
         </div>
+
     </div>
 </div>
 
@@ -73,15 +80,32 @@
     .top_menu .title {
         text-align: center;
         color: #bcbdc0;
-        font-size: 20px;
+        font-size: 30px;
     }
 
+    .top_menu .signout  {
+        margin-right: calc(50% - 40px);
+        margin-left: calc(50% - 40px);
+        margin-top: 5px;
+        width: 80px;
+        text-align: center;
+        border-radius: 90px;
+        background-color: #a3d063;
+        border: 2px solid #a3d063;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+    .top_menu .signout:hover {
+        color: #a3d063;
+        background-color: #fff;
+    }
     .messages {
         position: center ;
         list-style: none;
         padding: 20px 10px 0 10px;
         margin: 0;
-        height: calc(100% - 170px);
+        height: calc(100% - 148px);
         overflow: scroll;
     }
     .messages .message {
@@ -282,8 +306,7 @@
             $('.send_message').click(function (e) {
                 var customer_message = getMessageText();
                 sendMessage(customer_message, customer);
-                var reply = "I'm not finished yet";
-                sendMessage(reply, robot);
+                sendMessage(customer_message, robot);
             });
           sendMessage('Hello, I am your dining assistant!', robot);
         });
