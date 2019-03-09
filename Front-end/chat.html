@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="icon" type="image/png" href="images/icons/robot_icon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/chatbox.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.418.0.min.js"></script>
     <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
     <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
     <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
@@ -16,7 +18,6 @@
     <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
     <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
     <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
-    <script type="text/javascript" src="js/apigClient.js"></script>
 
     <meta charset="UTF-8">
     <title>Dining Robot</title>
@@ -61,84 +62,10 @@
 </div>
 </body>
 
-<script>
-    var customer = 'right';
-    var robot = 'left';
-    var apigClient = apigClientFactory.newClient();
-    var token = location.toString().split('chat.html?code=')[1];
+<script type="text/javascript" src="js/apigClient.js"></script>
+<script type="text/javascript" src="js/iamDealer.js"></script>
+<script type="text/javascript" src="js/apiAdaptor.js"></script>
+<script type="text/javascript" src="js/chatBotDealer.js"></script>
 
-
-
-    (function () {
-        var Message;
-        Message = function (arg) {
-            this.text = arg.text;
-            this.message_side = arg.message_side;
-            this.draw = function (_this) {
-                return function () {
-                    var $message;
-                    $message = $($('.message_template').clone().html());
-                    $message.addClass(_this.message_side).find('.text').html(_this.text);
-                    $('.messages').append($message);
-                    return setTimeout(function () {
-                        return $message.addClass('appeared');
-                    }, 0);
-                };
-            }(this);
-            return this;
-        };
-
-        $(function () {
-            var getMessageText, message_side, sendMessage, getReply;
-
-            getMessageText = function () {
-                var $message_input;
-                $message_input = $('.message_input');
-                return $message_input.val();
-            };
-
-
-
-            sendMessage = function (text, sender) {
-                var $messages, message;
-                if (text.trim() === '') {
-                    return;
-                }
-                $('.message_input').val('');
-                $messages = $('.messages');
-                message_side = sender;
-
-                message = new Message({
-                    text: text,
-                    message_side: message_side
-                });
-
-                message.draw();
-                return $messages.animate({scrollTop: $messages.prop('scrollHeight')}, 300);
-            };
-
-            getReply = function(msg){
-                var body = {
-                    "body": msg
-                };
-
-                apigClient.chatbotPost({}, body, {}).then((res)=>{
-                    var data = res.data;
-                    sendMessage(data, robot);
-                }).catch((e)=>{
-                    sendMessage('Can you repeat? I failed to deal with your message.', robot);
-                });
-            };
-
-            $('.send_message').click(function (e) {
-                var customer_message = getMessageText();
-                sendMessage(customer_message, customer);
-                getReply(customer_message);
-            });
-            sendMessage('Hello, I am your dining assistant!', robot);
-            // sendMessage(token, robot);
-        });
-    }.call(this));
-</script>
 
 </html>
