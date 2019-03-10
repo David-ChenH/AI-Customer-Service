@@ -1,9 +1,5 @@
 
 function toBotRequest(message, userID){
-    if (!userID) {
-        userID = 'UNK'
-    } //have to replace for UNK
-
     var date = new Date();
     return {
         messages : [
@@ -20,6 +16,7 @@ function toBotRequest(message, userID){
 }
 
 function getBotResponse(response) {
-    var messages = response.data;
+    var messages = response.data.messages[0].unstructured.text;
+    return JSON.stringify(messages).replace(/"/g, "");
 
 }

@@ -1,7 +1,13 @@
-var customer = 'right';
-var robot = 'left';
-var apigClient = apigClientFactory.newClient();
+/**
+ * This file is used for messs
+ */
+const customer = 'right';
+const robot = 'left';
 var token = location.toString().split('chat.html?code=')[1];
+
+if (!token){
+    token='UNK';
+}
 
 (function () {
     var Message;
@@ -53,9 +59,11 @@ var token = location.toString().split('chat.html?code=')[1];
 
         getReply = function(msg){
             var body = toBotRequest(msg, token);
+            // console.log(body);
 
             apigClient.chatbotPost({}, body, {}).then((res)=>{
                 var data = getBotResponse(res);
+                console.log(data);
                 sendMessage(data, robot);
             }).catch((e)=>{
                 sendMessage('Can you repeat? I failed to deal with your message.', robot);
