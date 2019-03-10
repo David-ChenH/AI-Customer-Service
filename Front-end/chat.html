@@ -42,12 +42,12 @@
     <ul class="messages"></ul>
     <div class="bottom_wrapper clearfix">
         <div class="message_input_wrapper">
-            <input class="message_input" placeholder="Type your message here..." />
+            <input class="message_input" placeholder="Type your message here..." onkeypress="EnterPress(event)"/>
         </div>
         <div class="send_message">
             <div class="icon"></div>
 
-        <div class="text">
+        <div id="send_message" class="text">
             <p>Send</p>
         </div>
 

@@ -1,10 +1,16 @@
 /**
- * This file is used for messs
+ * This file is used for message display and API query
  */
+
 const customer = 'right';
 const robot = 'left';
 
-
+function EnterPress(e){ // detect key down
+    var e = e || window.event;
+    if(e.keyCode === 13){
+        document.getElementById("send_message").click();
+    }
+}
 (function () {
     var Message;
     Message = function (arg) {
@@ -55,7 +61,7 @@ const robot = 'left';
 
         getReply = function(msg){
             if (!token){
-                sendMessage('You are illegal user', robot);
+                sendMessage('You are illegal user! Please try to sign in first :)', robot);
                 return
             }
             var body = toBotRequest(msg, token);
@@ -65,8 +71,7 @@ const robot = 'left';
                 console.log(data);
                 sendMessage(data, robot);
             }).catch((e)=>{
-                sendMessage('Can you repeat? I failed to connect server.', robot);
-                // sendMessage(JSON.stringify(e), robot);
+                sendMessage('Fail to get server response.', robot);
             });
         };
 
@@ -76,6 +81,5 @@ const robot = 'left';
             getReply(customer_message);
         });
         sendMessage('Hello, I am your dining assistant!', robot);
-        // sendMessage(token, robot);
     });
 }.call(this));

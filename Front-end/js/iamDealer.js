@@ -3,9 +3,9 @@
  */
 
 const client_id = '3pab5c41pc87n342kigmn3t2mv';
-// const redirect_uri = 'https://d3n3sktne54bjw.cloudfront.net/chat.html';
-const identity_pool_id = "us-east-1:dfd1d7f0-1a52-42c5-8cd6-1da69bbef1d1";
 const user_pool_id = 'us-east-1_Z8b950ThM';
+const identity_pool_id = "us-east-1:dfd1d7f0-1a52-42c5-8cd6-1da69bbef1d1";
+
 const aws_region = 'us-east-1';
 var token = null;
 
@@ -19,7 +19,6 @@ catch (e) {
 }
 
 AWS.config.region = aws_region; // Region
-console.log(id_token);
 
 if (AWS.config.credentials) {
     AWS.config.credentials.clearCachedId();
@@ -36,6 +35,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 AWS.config.credentials.refresh((error) => {
     if (error) {
         console.error(error);
+        console.log('Fail to log!');
     } else {
         console.log('Successfully logged!');
     }
@@ -49,8 +49,6 @@ AWS.config.credentials.get(function(){
 
     // Credentials will be available when this function is called.
     try {
-        console.log(AWS.config.credentials.accessKeyId);
-        console.log(AWS.config.credentials.secretAccessKey);
         token = AWS.config.credentials.accessKeyId;
 
         apigClient = apigClientFactory.newClient({
@@ -58,15 +56,12 @@ AWS.config.credentials.get(function(){
             secretKey: AWS.config.credentials.secretAccessKey,
             sessionToken: AWS.config.credentials.sessionToken
         });
-        console.log('token exchanged!');
-
     }
     catch(e) {
         console.log('token exchange failed');
     }
 
 });
-setTimeout(2000);
 
 
 
