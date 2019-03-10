@@ -4,13 +4,23 @@
 
 const client_id = '3pab5c41pc87n342kigmn3t2mv';
 // const redirect_uri = 'https://d3n3sktne54bjw.cloudfront.net/chat.html';
-const identity_pool_id = 'us-east-1:dfd1d7f0-1a52-42c5-8cd6-1da69bbef1d1';
+const identity_pool_id = "us-east-1:dfd1d7f0-1a52-42c5-8cd6-1da69bbef1d1";
 const user_pool_id = 'us-east-1_Z8b950ThM';
 const aws_region = 'us-east-1';
+var token = null;
+
+
+try {
+    id_token = location.toString().split('id_token=')[1].split('&access_token=')[0];
+}
+
+catch (e) {
+    id_token = 'UNK';
+}
+
 AWS.config.region = aws_region; // Region
 
-
-var id_token='eyJraWQiOiIzS2Q2Y1pKNVwvbk9vRlJldFd6ZW96TnJQY3hrTVk2QkRTaUlyN095ZWt5RT0iLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoid0VRUGliZjlfWm93ak14ZWlDT0ItQSIsInN1YiI6IjRhZDYzN2VhLTU1ZmEtNGY1My05MGQyLTM5NDFlZGIwMTAxOSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9aOGI5NTBUaE0iLCJjb2duaXRvOnVzZXJuYW1lIjoiNGFkNjM3ZWEtNTVmYS00ZjUzLTkwZDItMzk0MWVkYjAxMDE5IiwiZ2l2ZW5fbmFtZSI6IkNoZW55dSIsImF1ZCI6IjNwYWI1YzQxcGM4N24zNDJraWdtbjN0Mm12IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE1NTIxNzUzNzksImV4cCI6MTU1MjE3ODk3OSwiaWF0IjoxNTUyMTc1Mzc5LCJmYW1pbHlfbmFtZSI6IlhJIiwiZW1haWwiOiJ4aS5jaGVueXVAY29sdW1iaWEuZWR1In0.dViUH6jCjB1o1_VI20hKjcerZ9yP17-m-zl4kKWV98U1mp0Y_jgO6XZ1qVYfBqxUzFUU3geNY2OBPjqkHNc7NTC5wIDk4b5vGalbCna2yRZwwxnI1wrM0X9XrbyD1u_uK0uQkOcU1ynkclzakh-D1tD5gEhugvD5dvROI7Zno3m5iiVahc6YrmhCRb2AOJ9Vx2swT-pGPWRN26vcSeFT51Th7BqM1dwLT7XgSjjhy-BSmndCpBzhuHa9qnNyFUCPRpJfTZHejYultSY56827jlmD-dDjF-nUZJFD8WEaVMBFcNNQSax9a2aK8tDvJ1gOMxK_R5Z361DV4XjX_DNhxw'
+id_token ='eyJraWQiOiIzS2Q2Y1pKNVwvbk9vRlJldFd6ZW96TnJQY3hrTVk2QkRTaUlyN095ZWt5RT0iLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiYllubGNfQjRUc0NMbGEzQ0phLXd3dyIsInN1YiI6IjRhZDYzN2VhLTU1ZmEtNGY1My05MGQyLTM5NDFlZGIwMTAxOSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9aOGI5NTBUaE0iLCJjb2duaXRvOnVzZXJuYW1lIjoiNGFkNjM3ZWEtNTVmYS00ZjUzLTkwZDItMzk0MWVkYjAxMDE5IiwiZ2l2ZW5fbmFtZSI6IkNoZW55dSIsImF1ZCI6IjNwYWI1YzQxcGM4N24zNDJraWdtbjN0Mm12IiwiZXZlbnRfaWQiOiJmMzFmNDg5ZC00MzAyLTExZTktOWE5Zi0xNWY3M2RhYzY3MjEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1MjIwMTU1NiwiZXhwIjoxNTUyMjA1MTU2LCJpYXQiOjE1NTIyMDE1NTYsImZhbWlseV9uYW1lIjoiWEkiLCJlbWFpbCI6InhpLmNoZW55dUBjb2x1bWJpYS5lZHUifQ.CEKGGKNOfl0a4DswKFbSB483V2h4qNHcoNL1gXiYV60BaP1UBSCA-AcTxQAbb2v6wPW2jz-sD_gY5qon-szqnfdENCCCclIMklzTNhg0IBfE0iKbZydcY4aXyCm2SQl6apOME7826ZjBHftYwfbabBHhdqgJxJj5pDeZwLyeACiY8ucew08OTyybmqC0p3H7ZSy2Zw7vOPt33X-AL1PIE8mIU6nwpY2ix1_sXWKzGDaeYGcHYvy6-LiWpA7qbE4kqeklDZj8CP5zHUaMD60Op_uBc88O1XJDjVhNlLYggc730zbCeituLWqmtYfmMRD8WPLT4h91Cz5eBzPVlJwycA'
 console.log(id_token);
 
 if (AWS.config.credentials) {
@@ -21,25 +31,51 @@ if (AWS.config.credentials) {
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: identity_pool_id,
     Logins: {
-        [`cognito-idp.${aws_region}.amazonaws.com/${user_pool_id}`]: id_token
+        'cognito-idp.us-east-1.amazonaws.com/us-east-1_Z8b950ThM': id_token
     }
 });
 
+AWS.config.credentials.refresh((error) => {
+    if (error) {
+        console.error(error);
+    } else {
+        console.log('Successfully logged!');
+    }
+});
+
+
 var apigClient = apigClientFactory.newClient();
 
-try {
-    apigClient = apigClientFactory.newClient({
-        accessKey: AWS.config.credentials.accessKeyId,
-        secretKey: AWS.config.credentials.secretAccessKey,
-        sessionToken: AWS.config.credentials.sessionToken
-    });
-    console.log('token exchanged!');
-    console.log(AWS.config.credentials.accessKeyId);
-    console.log(AWS.config.credentials.secretAccessKey);
-}
-catch(e) {
-    console.log('token exchange failed');
-}
+// Make the call to obtain credentials
+AWS.config.credentials.get(function(){
+
+    // Credentials will be available when this function is called.
+    try {
+        console.log(AWS.config.credentials.accessKeyId);
+        console.log(AWS.config.credentials.secretAccessKey);
+        token = AWS.config.credentials.accessKeyId;
+
+        apigClient = apigClientFactory.newClient({
+            accessKey: AWS.config.credentials.accessKeyId,
+            secretKey: AWS.config.credentials.secretAccessKey,
+            sessionToken: AWS.config.credentials.sessionToken
+        });
+        console.log('token exchanged!');
+
+    }
+    catch(e) {
+        console.log('token exchange failed');
+    }
+
+
+});
+
+AWS.config.credentials.get();
+
+
+
+
+
 
 // this function getCredentials with auto code
 // var gainCredentials = function (auth_code) {

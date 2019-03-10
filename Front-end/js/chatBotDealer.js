@@ -3,11 +3,7 @@
  */
 const customer = 'right';
 const robot = 'left';
-var token = location.toString().split('chat.html?code=')[1];
 
-if (!token){
-    token='UNK';
-}
 
 (function () {
     var Message;
@@ -58,8 +54,11 @@ if (!token){
         };
 
         getReply = function(msg){
+            if (!token){
+                sendMessage('You are illegal user', robot);
+                return
+            }
             var body = toBotRequest(msg, token);
-            // console.log(body);
 
             apigClient.chatbotPost({}, body, {}).then((res)=>{
                 var data = getBotResponse(res);
