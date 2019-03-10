@@ -19,8 +19,6 @@ catch (e) {
 }
 
 AWS.config.region = aws_region; // Region
-
-id_token ='eyJraWQiOiIzS2Q2Y1pKNVwvbk9vRlJldFd6ZW96TnJQY3hrTVk2QkRTaUlyN095ZWt5RT0iLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiYllubGNfQjRUc0NMbGEzQ0phLXd3dyIsInN1YiI6IjRhZDYzN2VhLTU1ZmEtNGY1My05MGQyLTM5NDFlZGIwMTAxOSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9aOGI5NTBUaE0iLCJjb2duaXRvOnVzZXJuYW1lIjoiNGFkNjM3ZWEtNTVmYS00ZjUzLTkwZDItMzk0MWVkYjAxMDE5IiwiZ2l2ZW5fbmFtZSI6IkNoZW55dSIsImF1ZCI6IjNwYWI1YzQxcGM4N24zNDJraWdtbjN0Mm12IiwiZXZlbnRfaWQiOiJmMzFmNDg5ZC00MzAyLTExZTktOWE5Zi0xNWY3M2RhYzY3MjEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTU1MjIwMTU1NiwiZXhwIjoxNTUyMjA1MTU2LCJpYXQiOjE1NTIyMDE1NTYsImZhbWlseV9uYW1lIjoiWEkiLCJlbWFpbCI6InhpLmNoZW55dUBjb2x1bWJpYS5lZHUifQ.CEKGGKNOfl0a4DswKFbSB483V2h4qNHcoNL1gXiYV60BaP1UBSCA-AcTxQAbb2v6wPW2jz-sD_gY5qon-szqnfdENCCCclIMklzTNhg0IBfE0iKbZydcY4aXyCm2SQl6apOME7826ZjBHftYwfbabBHhdqgJxJj5pDeZwLyeACiY8ucew08OTyybmqC0p3H7ZSy2Zw7vOPt33X-AL1PIE8mIU6nwpY2ix1_sXWKzGDaeYGcHYvy6-LiWpA7qbE4kqeklDZj8CP5zHUaMD60Op_uBc88O1XJDjVhNlLYggc730zbCeituLWqmtYfmMRD8WPLT4h91Cz5eBzPVlJwycA'
 console.log(id_token);
 
 if (AWS.config.credentials) {
@@ -44,7 +42,7 @@ AWS.config.credentials.refresh((error) => {
 });
 
 
-var apigClient = apigClientFactory.newClient();
+var apigClient = null;
 
 // Make the call to obtain credentials
 AWS.config.credentials.get(function(){
@@ -67,11 +65,8 @@ AWS.config.credentials.get(function(){
         console.log('token exchange failed');
     }
 
-
 });
-
-AWS.config.credentials.get();
-
+setTimeout(2000);
 
 
 

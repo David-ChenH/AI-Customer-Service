@@ -65,8 +65,8 @@ const robot = 'left';
                 console.log(data);
                 sendMessage(data, robot);
             }).catch((e)=>{
-                sendMessage('Can you repeat? I failed to deal with your message.', robot);
-                sendMessage(e.toLocaleString(), robot);
+                sendMessage('Can you repeat? I failed to connect server.', robot);
+                // sendMessage(JSON.stringify(e), robot);
             });
         };
 
