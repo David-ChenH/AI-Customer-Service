@@ -1,7 +1,7 @@
 #  AI-Customer-Service <img src="https://github.com/David-ChenH/AI-Customer-Service/blob/master/Front-end/images/icons/robot_icon.ico" width=50>
 
 AI dining chatbot Project based on AWS<br/>
-Check here to view our <a href='https://d3n3sktne54bjw.cloudfront.net/index.html'> sample web page </a> 
+Check here to view our <a href='https://d3n3sktne54bjw.cloudfront.net/index.html'> web page </a> 
 
 ## Authors
 - Chenyu Xi (cx2219)
