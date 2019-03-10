@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5fe185c-40bc-41c2-a6d4-219958e1f700" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AI-Customer-Service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-end/lambda1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-end/lambda1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +20,7 @@
     <session id="-1830555772">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.6" value="2" />
@@ -28,6 +34,7 @@
           <entry key="html" value="7" />
           <entry key="jpg" value="2" />
           <entry key="js" value="16" />
+          <entry key="py" value="1" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
@@ -37,6 +44,7 @@
           <entry key="HTML" value="7" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="16" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -81,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/front-end/chat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="601">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -175,6 +183,11 @@
             <path>
               <item name="AI-Customer-Service" type="b2602c69:ProjectViewProjectNode" />
               <item name="AI-Customer-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="Back-end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AI-Customer-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AI-Customer-Service" type="462c0819:PsiDirectoryNode" />
               <item name="front-end" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -182,6 +195,12 @@
               <item name="AI-Customer-Service" type="462c0819:PsiDirectoryNode" />
               <item name="front-end" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AI-Customer-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AI-Customer-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AI-Customer-Service" type="b2602c69:ProjectViewProjectNode" />
@@ -267,12 +286,12 @@
       <workItem from="1552157362347" duration="14137000" />
       <workItem from="1552178968910" duration="13149000" />
       <workItem from="1552233236651" duration="4128000" />
-      <workItem from="1552248195749" duration="696000" />
+      <workItem from="1552248195749" duration="1177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77480000" />
+    <option name="totallyTimeSpent" value="77961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,7 +305,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45604396" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.45604396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +320,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21632653" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21632653" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
@@ -388,10 +407,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Back-end/lambda1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front-end/chat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="601">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>

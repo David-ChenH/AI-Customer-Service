@@ -77,7 +77,11 @@ def build_validation_result(is_valid, violated_slot, message_content):
     if message_content is None:
         return {
             "isValid": is_valid,
+<<<<<<< HEAD
             "violatedSlot": violated_slot,
+=======
+            "violatedSlot": violated_slot
+>>>>>>> 4e757f2dc6bc4fca78edc8a00acad4deb12b4aef
         }
 
     return {
@@ -168,6 +172,7 @@ def dining_suggest(intent_request):
     api_key='TYNfArrYlFZgOnWnIxHucOea0Duvdp4j0h8FL-QZF95NgQ6TahotSsaZ9VCODZWIJamOYjPB-TnL1JS3aJaZzG0sIByKr8xfOFfiyJeGusK76hoHJONEJGvRYTODXHYx'
     headers = {'Authorization': 'Bearer %s' % api_key}
     yelp_url = "https://api.yelp.com/v3/businesses/search"
+<<<<<<< HEAD
     params = {'term':'restaurants','location':intent_request['currentIntent']['slots']["Location"],
         'categories': intent_request['currentIntent']['slots']["CuisineType"], "limit": 5}
     req = requests.get(yelp_url, params=params, headers=headers)
@@ -181,6 +186,23 @@ def dining_suggest(intent_request):
                  'Fulfilled',
                  {'contentType': 'PlainText',
                   'content': content_text})
+=======
+    params = {'term':'restaurants','location':intent_request['currentIntent']['slots']["Location"].lower(),
+        'categories': intent_request['currentIntent']['slots']["CuisineType"].lower(), "limit": 5
+    }
+    req = requests.get(yelp_url, params=params, headers=headers)
+    req = json.loads(req.text)
+    content_text = "The results for your request are: "
+
+    count = 1
+    for restaurant in req['businesses']:
+        content_text += str(count) + ". " "Resturant Name: " + restaurant['name'] + ", " + "Resturant Location: " + restaurant['location']['address1'] + ";        "
+        count += 1
+    return close(intent_request['sessionAttributes'],
+                 'Fulfilled',
+                 {'contentType': 'PlainText',
+                  'content': content_text[:-1]})
+>>>>>>> 4e757f2dc6bc4fca78edc8a00acad4deb12b4aef
 
 
 """ --- Intents --- """
