@@ -49,7 +49,7 @@ AWS.config.credentials.get(function(){
 
     // Credentials will be available when this function is called.
     try {
-        token = AWS.config.credentials.accessKeyId;
+        token = AWS.config.credentials.sessionToken;
 
         apigClient = apigClientFactory.newClient({
             accessKey: AWS.config.credentials.accessKeyId,
