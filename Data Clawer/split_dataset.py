@@ -19,8 +19,8 @@ test = 200
 test_rows = rows[:200]
 train_rows = rows[200:]
 
-TR_CSV_FILE = './train.csv'
-TE_CSV_FILE = './test.csv'
+TR_CSV_FILE = './data/train.csv'
+TE_CSV_FILE = './data/test.csv'
 
 with open(TR_CSV_FILE, 'w+') as out_file:
     writer = csv.DictWriter(fieldnames=fieldnames, f=out_file)

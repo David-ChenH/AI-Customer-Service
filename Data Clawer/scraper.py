@@ -3,7 +3,7 @@ import json
 import csv
 
 CUISINE_LIST = ['Mexican', 'Italian', 'British', 'American', 'Chinese', 'Thailand', 'Japanese']
-CSV_PATH = './data.csv'
+CSV_PATH = './data/data.csv'
 
 
 def res_dealer(res, cuisine, data_dict):
@@ -19,7 +19,7 @@ def res_dealer(res, cuisine, data_dict):
         name = restaurant['name']
         review_n = restaurant['review_count']
         rate = restaurant['rating']
-        recommended = 0
+        recommended = 1
         if not data_dict.get(res_id):
             data_dict[res_id] = [res_id, cuisine, name, review_n, rate, recommended]
         else:

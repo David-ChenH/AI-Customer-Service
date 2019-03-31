@@ -2,7 +2,7 @@ import csv
 from scraper import CSV_PATH
 
 """
-I choose the top 100 Chinese restaurant with highest reviews as recommended
+I choose the top 100 restaurant with lowest reviews counts and rate < 4.0 as not recommended
 """
 
 with open(CSV_PATH, 'r') as csv_file:
@@ -16,8 +16,8 @@ with open(CSV_PATH, 'r') as csv_file:
 
     count = 0
     for row in rows:
-        if 'chinese' == row['cuisine']:
-            row['recommended'] = 1
+        if 4 > float(row['rate']):
+            row['recommended'] = 0
             count += 1
 
         if count == 100:
@@ -27,7 +27,7 @@ with open(CSV_PATH, 'r') as csv_file:
         print('NOT THAT MANY CANDIDATES')
 
 
-R_CSV_PATH = './data_r.csv'
+R_CSV_PATH = './data/data_marked.csv'
 
 with open(R_CSV_PATH, 'w+') as out_file:
     writer = csv.DictWriter(fieldnames=fieldnames, f=out_file)
