@@ -34,7 +34,7 @@ with open(CSV_PATH, 'r') as csv_file:
     rows.reverse()
 
     for row in rows:
-        if 4 > float(row['rate']):
+        if 4 < float(row['rate']):
             row['recommended'] = 1
             count_good += 1
         if count_good == 100:

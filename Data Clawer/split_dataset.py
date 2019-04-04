@@ -13,8 +13,11 @@ with open(R_CSV_PATH, 'r') as csv_file, open(TR_CSV_FILE, 'w+') as train_file, o
 
     reader = csv.reader(csv_file)
     fieldnames = next(reader)  # move the cursor
+
     writer_train = csv.DictWriter(fieldnames=fieldnames, f=train_file)
+    writer_train.writeheader()
     writer_test = csv.DictWriter(fieldnames=fieldnames, f=test_file)
+    writer_test.writeheader()
 
     reader = csv.DictReader(csv_file, fieldnames=fieldnames)
     rows = [row for row in reader]
