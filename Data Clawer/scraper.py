@@ -19,7 +19,7 @@ def res_dealer(res, cuisine, data_dict):
         name = restaurant['name']
         review_n = restaurant['review_count']
         rate = restaurant['rating']
-        recommended = 1
+        recommended = None
         if not data_dict.get(res_id):
             data_dict[res_id] = [res_id, cuisine, name, review_n, rate, recommended]
         else:

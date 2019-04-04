@@ -6,33 +6,25 @@ import random
 This file is used to split the csv file into train and test files
 """
 
-with open(R_CSV_PATH, 'r') as csv_file:
+TR_CSV_FILE = './data/train.csv'
+TE_CSV_FILE = './data/test.csv'
+
+with open(R_CSV_PATH, 'r') as csv_file, open(TR_CSV_FILE, 'w+') as train_file, open(TE_CSV_FILE, 'w+') as test_file:
 
     reader = csv.reader(csv_file)
     fieldnames = next(reader)  # move the cursor
+    writer_train = csv.DictWriter(fieldnames=fieldnames, f=train_file)
+    writer_test = csv.DictWriter(fieldnames=fieldnames, f=test_file)
+
     reader = csv.DictReader(csv_file, fieldnames=fieldnames)
     rows = [row for row in reader]
     random.shuffle(rows)
 
-test = 200
-
-test_rows = rows[:200]
-train_rows = rows[200:]
-
-TR_CSV_FILE = './data/train.csv'
-TE_CSV_FILE = './data/test.csv'
-
-with open(TR_CSV_FILE, 'w+') as out_file:
-    writer = csv.DictWriter(fieldnames=fieldnames, f=out_file)
-    writer.writeheader()
-    for row in train_rows:
-        writer.writerow(row)
-
-with open(TE_CSV_FILE, 'w+') as out_file:
-    writer = csv.DictWriter(fieldnames=fieldnames, f=out_file)
-    writer.writeheader()
-    for row in test_rows:
-        writer.writerow(row)
+    for row in rows:
+        if not row['recommended']:
+            writer_test.writerow(row)
+        else:
+            writer_train.writerow(row)
 
 
 
