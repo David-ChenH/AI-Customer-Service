@@ -1,8 +1,10 @@
 import csv
 
-
-RR_CSV_FILE = './data/result.csv'
-FIN_FILE = './data/recommended.csv'
+"""
+Use this file to deal with download result file from amazon
+"""
+RR_CSV_FILE = './data/ml_result.csv'
+FIN_FILE = './data/final_for_elastic.csv'
 
 with open(RR_CSV_FILE, 'r') as in_file, open(FIN_FILE, 'w+') as out_file:
     reader = csv.reader(in_file)
