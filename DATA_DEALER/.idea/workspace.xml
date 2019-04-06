@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36cc3c3b-3b3a-49a0-a113-6a78a3c206b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/Data Clawer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/data_marked.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/recommended.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/result.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/data_marked.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/db_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/final_for_elastic.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/ml_result.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/getRecommend.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/mark_recommendation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/recommended_model.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/scraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data Clawer/split_dataset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-end/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-end/js/iamDealer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/js/iamDealer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DynamoDB/store_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +17,13 @@
     <SUITE FILE_PATH="coverage/Data_Clawer$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1554579551104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Data_Clawer$test.coverage" NAME="test Coverage Results" MODIFIED="1554472874304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Data_Clawer$mark_recommendation.coverage" NAME="mark_recommendation Coverage Results" MODIFIED="1554579785567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATA_DEALER$store_data.coverage" NAME="store_data Coverage Results" MODIFIED="1554585048229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DynamoDB" />
     <SUITE FILE_PATH="coverage/Data_Clawer$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1554212309247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DATA_DEALER$store_in_DB.coverage" NAME="store_in_DB Coverage Results" MODIFIED="1554585025614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -60,11 +35,40 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DynamoDB/store_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamoDB/create_table.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/db_data.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="210">
+              <caret line="15" column="48" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -84,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/split_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="345">
               <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -96,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getRecommend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -146,6 +150,7 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/data/store_in_DB.py" />
         <option value="$PROJECT_DIR$/store_in_DB.py" />
+        <option value="$PROJECT_DIR$/DynamoDB/store_data.py" />
       </list>
     </option>
   </component>
@@ -159,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +185,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.store_in_DB">
+  <component name="RunManager" selected="Python.store_data">
     <configuration name="getRecommend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data Clawer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,28 +257,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Data Clawer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="split_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Data Clawer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -288,6 +271,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/split_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="store_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Data Clawer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DynamoDB" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DynamoDB/store_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -320,11 +325,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.store_data" />
         <item itemvalue="Python.store_in_DB" />
         <item itemvalue="Python.getRecommend" />
         <item itemvalue="Python.split_dataset" />
         <item itemvalue="Python.mark_recommendation" />
-        <item itemvalue="Python.scraper" />
       </list>
     </recent_temporary>
   </component>
@@ -351,16 +356,18 @@
       <workItem from="1554577285628" duration="2944000" />
       <workItem from="1554580828745" duration="1876000" />
       <workItem from="1554583440117" duration="81000" />
+      <workItem from="1554583673455" duration="1829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29295000" />
+    <option name="totallyTimeSpent" value="31124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2728938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2759463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -374,7 +381,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298122" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37755102" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.37755102" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -416,16 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommended_model.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -435,18 +432,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/split_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="345">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getRecommend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -467,6 +457,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db_data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getRecommend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamoDB/create_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamoDB/store_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
