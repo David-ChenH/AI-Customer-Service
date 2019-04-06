@@ -44,6 +44,7 @@ AWS.config.credentials.refresh((error) => {
 
 var apigClient = null;
 
+
 // Make the call to obtain credentials
 AWS.config.credentials.get(function(){
 

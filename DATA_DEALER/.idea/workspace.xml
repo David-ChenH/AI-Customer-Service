@@ -3,7 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="36cc3c3b-3b3a-49a0-a113-6a78a3c206b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/Data Clawer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/data_marked.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/recommended.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/backup/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/data_marked.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/db_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/final_for_elastic.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/ml_result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/data/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/getRecommend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/mark_recommendation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/recommended_model.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/scraper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data Clawer/split_dataset.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Front-end/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Front-end/js/iamDealer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/js/iamDealer.js" afterDir="false" />
     </list>
@@ -24,10 +48,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
+            <state relative-caret-position="187">
               <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -39,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="150">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -80,18 +104,10 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="92" selection-start-line="5" selection-start-column="92" selection-end-line="5" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/store_in_DB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -143,23 +159,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Data Clawer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data Clawer" type="462c0819:PsiDirectoryNode" />
+              <item name="DATA_DEALER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DATA_DEALER" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Data Clawer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data Clawer" type="462c0819:PsiDirectoryNode" />
+              <item name="DATA_DEALER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DATA_DEALER" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DATA_DEALER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DATA_DEALER" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamoDB" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,17 +350,17 @@
       <workItem from="1554577222345" duration="51000" />
       <workItem from="1554577285628" duration="2944000" />
       <workItem from="1554580828745" duration="1876000" />
+      <workItem from="1554583440117" duration="81000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29214000" />
+    <option name="totallyTimeSpent" value="29295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26984128" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -353,7 +374,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298122" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.37755102" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37755102" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -384,12 +405,23 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/store_in_DB.py" />
     <entry file="file://$PROJECT_DIR$/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="187">
           <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -411,13 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getRecommend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -425,27 +450,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mark_recommendation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="92" selection-start-line="5" selection-start-column="92" selection-end-line="5" selection-end-column="92" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store_in_DB.py">
+    <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="1155">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
