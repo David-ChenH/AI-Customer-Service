@@ -41,5 +41,5 @@ with open(DATA_PATH, 'r') as file, open(JSON_PATH, 'w+') as json_file:
 
 """
 Use this command line for push json file to your ES service
-curl -XPOST elasticsearch_domain_endpoint/_bulk --data-binary @bulk_cuisine.json -H 'Content-Type: application/json'
+curl -XPOST <Your endpoint>/_bulk --data-binary @bulk_cuisine.json -H 'Content-Type: application/json'
 """

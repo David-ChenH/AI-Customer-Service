@@ -12,7 +12,7 @@
 {"id": "zb78ua-FlfFRj8v082giBw", "cuisine": "chinese", "score": "0.08278412371873856"}
 {"index": {"_index": "predictions", "_type": "Prediction", "_id": "CaFkfhLxjzPAxS9-G6lNVg"}}
 {"id": "CaFkfhLxjzPAxS9-G6lNVg", "cuisine": "mexican", "score": "0.1019396185874939"}
-{"index": {"_index": "predictions", "_type": "Prediction", "_id": "wurhcLKXD4YJ5XfTxpbaE5Q"}}
+{"index": {"_index": "predictions", "_type": "Prediction", "_id": "wurhcLKXD4YJ5XfTxpbE5Q"}}
 {"id": "wurhcLKXD4YJ5XfTxpbE5Q", "cuisine": "chinese", "score": "0.17463409900665283"}
 {"index": {"_index": "predictions", "_type": "Prediction", "_id": "p4TYRKQ82N5Ntb6RPdLPMg"}}
 {"id": "p4TYRKQ82N5Ntb6RPdLPMg", "cuisine": "italian", "score": "0.8309028148651123"}
