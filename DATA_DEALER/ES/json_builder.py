@@ -37,3 +37,9 @@ with open(DATA_PATH, 'r') as file, open(JSON_PATH, 'w+') as json_file:
 
         json.dump(build_json_line(line), json_file)
         json_file.write('\n')
+
+
+"""
+Use this command line for push json file to your ES service
+curl -XPOST elasticsearch_domain_endpoint/_bulk --data-binary @bulk_cuisine.json -H 'Content-Type: application/json'
+"""
