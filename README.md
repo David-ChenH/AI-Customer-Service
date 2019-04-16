@@ -6,6 +6,8 @@ Check here to view our <a href='https://d3n3sktne54bjw.cloudfront.net/index.html
 ## Authors
 - Chenyu Xi (cx2219)
 - Chen Huang (ch3371)
+- Qinyuan Wei (qw2264)
+- Jiliang Ma (jm4750)
 
 ## User Login
 
